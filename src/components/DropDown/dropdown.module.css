@@ -1,0 +1,71 @@
+.dropdown_container {
+    max-width: 300px;
+}
+.buttons_container {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    z-index: 4;
+    border: 1px solid var(--greyMouse);
+}
+.buttons_container .buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.input_container {
+    font-size: 14px;
+    padding: 5px;
+    user-select: none;
+}
+.input_container input {
+    outline: none;
+    border: none;
+    user-select: none;
+    width: 100%;
+}
+
+.open {
+    cursor: pointer;
+    margin-left: 10px;
+}
+.delete {
+    cursor: pointer;
+}
+
+.options_container {
+    max-height: 200px;
+    overflow: auto;
+}
+
+.options_border {
+    border-top: none;
+    border: 1px solid var(--greyMouse);
+}
+.option {
+    user-select: none;
+    margin: 4px 0;
+    text-align: left;
+    color: var(--asphalt);
+    padding: 3px;
+    border-bottom: 1px solid var(--iceCube);
+    cursor: pointer;
+    z-index: 3;
+    transition: background 0.2s ease-in;
+}
+
+.options_container::-webkit-scrollbar {
+    width: 17px;               /* width of the entire scrollbar */
+}
+  
+.options_container::-webkit-scrollbar-track {
+    background: var(--white);
+    width: 20px;       /* color of the tracking area */
+}
+  
+.options_container::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 10px 10px var(--polarStar);
+}
+.option:hover {
+    background-color: var(--iceCube);
+}

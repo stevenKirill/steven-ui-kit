@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from './components/Conatiner/Container';
+import Container from './components/Container/Container';
 import Dropdown from './components/DropDown/Dropdown';
 import Calendar from './components/Calendar/Calendar';
 import H3 from './components/H3/H3';

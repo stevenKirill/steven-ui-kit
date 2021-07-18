@@ -1,0 +1,76 @@
+.calendar {
+    padding: 3px;
+    border: 2px solid var(--harlequin);
+}
+.header {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+.week {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    margin: 10px
+}
+.day {
+    font-size: 17px;
+    text-align: center;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+.after {
+    color: var(--night);
+    transition: background 0.5s ease-in;
+    cursor: pointer;
+}
+.before {
+    color: var(--silverMoon);
+    cursor: not-allowed;
+}
+.today {
+    color: var(--harlequin);
+    transition: background 0.5s ease-in;
+    cursor: pointer;
+}
+.after:hover, .today:hover {
+    background-color: var(--mint);
+}
+.left, .right {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.left {
+    margin-left: 30px;
+}
+.right {
+    margin-right: 30px;
+}
+.month {
+    font-size: 20px;
+    color: var(--paleTeal);
+}
+
+.selected {
+    background-color: var(--paleTeal);
+}
+.weekday {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.weekday div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.weekday:first-child {
+    margin-left: 24px;
+}

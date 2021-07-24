@@ -54,6 +54,7 @@
 .month {
     font-size: 20px;
     color: var(--paleTeal);
+    user-select: none;
 }
 
 .selected {
@@ -64,6 +65,7 @@
     grid-template-columns: repeat(7,1fr);
     margin-top: 10px;
     margin-bottom: 10px;
+    user-select: none;
 }
 .weekday div {
     display: flex;

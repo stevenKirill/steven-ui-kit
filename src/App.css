@@ -1,7 +1,16 @@
 body {
   padding: 10px;
+  font-family: cursive;
 }
-.app {
+.app h2 {
+  text-align: left;
+  margin-left: 55px;
+}
+
+.main-container {
   display: flex;
-  flex-wrap: wrap;
+}
+
+.pointer {
+  cursor: pointer;
 }

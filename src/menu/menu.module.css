@@ -1,0 +1,17 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-left: 50px;
+    margin-right: 100px;
+}
+.menu a {
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    padding-top: 10px;
+    user-select: none;
+}
+.menu a:hover {
+    color: #0D356C;
+}

@@ -82,6 +82,7 @@ const Calendar = ({ clickHandler }) => {
                         icon={faArrowRight}
                         size="s"
                         color={'#76DC8C'}
+                        className="pointer"
                     />
                 </div>
             </div>

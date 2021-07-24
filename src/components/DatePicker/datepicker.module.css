@@ -1,0 +1,37 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 10px;
+    max-width: 250px;
+    border-radius: 10px;
+}
+.inputWrapper {
+    display: flex;
+}
+.inputWrapper input {
+    border: none;
+    outline: none;
+    font-size: 17px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    margin-left: 5px;
+}
+.day, .month {
+    width: 25px;
+}
+.year {
+    width: 45px
+}
+.icon {
+    margin-left: 10px;
+}
+.dot {
+    margin-left: 5px;
+}
+.pickerCalendar {
+    position: absolute;
+    z-index: 1000;
+    background-color: white;
+    width: 500px;
+}

@@ -1,0 +1,45 @@
+
+.wrapper {
+    width: 350px;
+    max-height: 50px;
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    position: relative;
+    margin-top: 50px;
+}
+
+.rangeInner {
+    width: 100%;
+    display: flex;
+    height: 5px;
+    background-color: rgba(92, 151, 228, 0.42);
+    z-index: 8;
+}
+.circleLeft, .circleRigth {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #262C40;
+    display: block;
+    z-index: 10;
+    position: absolute;
+    cursor: grab;
+    top: 14px
+}
+.progress {
+    display: block;
+    height: 5px;
+    background-color:#262C40;
+    z-index: 9;
+    position: absolute;
+}
+.ranges {
+    width: 370px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+.ranges div {
+    user-select: none;
+}

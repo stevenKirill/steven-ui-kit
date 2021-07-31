@@ -9,6 +9,7 @@ const menu = () => {
         <Link to="/calendar">Calendar</Link>
         <Link to="/date-picker">DatePicker</Link>
         <Link to="/range-slider">RangeSlider</Link>
+        <Link to="/five-stars">FiveStars</Link>
     </div>
     );
 };

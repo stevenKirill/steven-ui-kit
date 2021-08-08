@@ -1,15 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import classes from './menu.module.css';
 
 const menu = () => {
     return (
         <div className={classes.menu}>
-        <Link to="/drop-down">DropDown</Link>
-        <Link to="/calendar">Calendar</Link>
-        <Link to="/date-picker">DatePicker</Link>
-        <Link to="/range-slider">RangeSlider</Link>
-        <Link to="/five-stars">FiveStars</Link>
+        <NavLink activeClassName={classes.active} to="/drop-down">DropDown</NavLink>
+        <NavLink activeClassName={classes.active} to="/calendar">Calendar</NavLink>
+        <NavLink activeClassName={classes.active} to="/date-picker">DatePicker</NavLink>
+        <NavLink activeClassName={classes.active} to="/range-slider">RangeSlider</NavLink>
+        <NavLink activeClassName={classes.active} to="/five-stars">FiveStars</NavLink>
+        <NavLink activeClassName={classes.active} to="/switch">Switch</NavLink>
     </div>
     );
 };

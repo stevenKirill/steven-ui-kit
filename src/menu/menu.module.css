@@ -15,3 +15,6 @@
 .menu a:hover {
     color: #0D356C;
 }
+.active {
+    border-bottom: 1px solid #0D356C;
+}

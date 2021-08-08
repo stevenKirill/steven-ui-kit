@@ -6,6 +6,7 @@ import CalendarPage from '../pages/CalendarPage';
 import DatePickerPage from '../pages/DatePickerPage';
 import RangeSliderPage from '../pages/RangeSlider';
 import FiveStarsPage from '../pages/FiveStarsPage';
+import SwitchPage from '../pages/SwitchPage';
 
 const routes = () => {
     return (
@@ -15,6 +16,7 @@ const routes = () => {
             <Route path="/date-picker" component={DatePickerPage}/>
             <Route path="/range-slider" component={RangeSliderPage}/>
             <Route path="/five-stars" component={FiveStarsPage}/>
+            <Route path="/switch" component={SwitchPage}/>
         </div>
     );
 };

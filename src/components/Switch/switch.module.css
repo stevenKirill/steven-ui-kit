@@ -1,0 +1,42 @@
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 44px;
+    background-color: #ccc;
+    cursor: pointer;
+}
+.switch input {
+    opacity: 0;
+    height: 0px;
+    width: 0px;
+}
+.slider {
+    cursor: pointer;
+    display: block;
+    content: '';
+    height: 35px;
+    width: 35px;
+    background-color: white;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: .3s;
+}
+
+.animate {
+    transform: translateX(38px);
+}
+
+.dark {
+    background-color: #262C40;
+}
+.rounded {
+    border-radius: 7px;
+}
+.circle {
+    border-radius: 50%;
+}
+.marginTop {
+    margin-top: 10px;
+}

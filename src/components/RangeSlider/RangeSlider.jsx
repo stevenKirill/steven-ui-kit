@@ -1,9 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import classes from './rangeSlider.module.css';
 
-/**
- * Компонент слайдера
- */
+/** Компонент слайдера */
 const RangeSlider = ({
     maxValue = 70,
     minValue = 0,
@@ -28,23 +26,24 @@ const RangeSlider = ({
     const moveLeft = (e) => {
         const {
             left: leftContainerBound,
-            right: rightContainerBound,
             width: containerWidth
         } = container.current.getBoundingClientRect();
         const { clientX } = e;
         if (clientX <= leftContainerBound) {
             left.current.style.left = '0%';
-            bar.current.style.width = max - min - circleWidth + '%';
-            bar.current.style.left = circleWidth + '%';
+            bar.current.style.width = max - min + '%';
             setMin(0);
             return
+        } else if (parseInt(bar.current.style.width) < 5) {
+            bar.current.style.width = '0%';
+            left.current.style.left = max - circleWidth + '%';
         } else {
             const val = (clientX - leftContainerBound) * 100 / containerWidth;
             left.current.style.left = val + '%';
             setMin(val.toFixed(0));
         }
     };
-    // TODO логика если кружочки касаються друг друга
+
     const moveRight = (e) => {
         const {
             left: leftContainerBound,
@@ -54,10 +53,15 @@ const RangeSlider = ({
 
         const { clientX } = e;
         if (clientX >= rightContainerBound) {
-            right.current.style.left = '100%';
             bar.current.style.width = 100 - min + '%';
             setMax(100);
             return;
+        } else if (parseInt(bar.current.style.width) < 5) {
+            console.log(max,'=> max')
+            console.log(min,'=? min')
+            console.log(circleWidth,'=> circleWidth')
+            bar.current.style.width = '0%';
+            right.current.style.left = min + circleWidth + '%';
         } else {
             const val = (clientX - leftContainerBound) * 100 / containerWidth;
             right.current.style.left = val  + '%';
@@ -65,12 +69,12 @@ const RangeSlider = ({
         }
     };
 
-    const startDragLeft = (e) => {
+    const startDragLeft = () => {
         document.addEventListener('mousemove', moveLeft);
         document.addEventListener('mouseup',stopDragLeft);
     };
 
-    const startDragRight = (e) => {
+    const startDragRight = () => {
         document.addEventListener('mousemove',moveRight);
         document.addEventListener('mouseup',stopDragRight);
     };

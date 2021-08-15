@@ -7,6 +7,7 @@ import DatePickerPage from '../pages/DatePickerPage';
 import RangeSliderPage from '../pages/RangeSlider';
 import FiveStarsPage from '../pages/FiveStarsPage';
 import SwitchPage from '../pages/SwitchPage';
+import TooltipPage from '../pages/TooltipPage';
 
 const routes = () => {
     return (
@@ -17,6 +18,7 @@ const routes = () => {
             <Route path="/range-slider" component={RangeSliderPage}/>
             <Route path="/five-stars" component={FiveStarsPage}/>
             <Route path="/switch" component={SwitchPage}/>
+            <Route path="/tooltip" component={TooltipPage}/>
         </div>
     );
 };

@@ -11,6 +11,7 @@ const ARROW_NAMES = {
 const Dropdown = ({ options, placeHolder }) => {
     const [isOpened,setIsOpened] = useState(false);
     const [value, setValue] = useState('');
+    const [currentRow,setCurrentRow] = useState(0);
 
     const ref = useRef(null);
 
@@ -23,14 +24,24 @@ const Dropdown = ({ options, placeHolder }) => {
 
     const handleKeyDown = (e) => {
         if (e.key === ARROW_NAMES.ArrowDown) {
-            // TODO сделать функционал нажатия на стрелочку вниз и переход в список
-            // с последующим выбором элемента на кнопку Enter
-        };
+            if (!isOpened) {
+                setIsOpened(true)
+            }
+            setCurrentRow(currentRow+1)
+        } else if (e.key === ARROW_NAMES.ArrowUp) {
+            setCurrentRow(currentRow-1)
+        } else if(e.key === 'Enter') {
+            const { name } = options[currentRow];
+            setValue(name);
+            setIsOpened(false);
+
+        }
     };
 
     const handleClickOutside = (e) => {
         if (ref.current && !ref.current.contains(e.target)) {
             setIsOpened(false);
+            setCurrentRow(0);
         }
     };
 
@@ -41,6 +52,7 @@ const Dropdown = ({ options, placeHolder }) => {
             const chosenValue = closestNode.dataset['value'];
             setValue(chosenValue);
             setIsOpened(false);
+            setCurrentRow(0);
         }
     };
 
@@ -92,12 +104,15 @@ const Dropdown = ({ options, placeHolder }) => {
                 className={`${classes.options_container} ${isOpened ? classes.options_border : ''}`}
                 onClick={handleChooseValue}
             >
-                    {isOpened && filter(options).map(option => {
+                    {isOpened && filter(options).map((option,index) => {
                         return (
                             <div
                                 key={option.id}
                                 data-value={option.name}
                                 className={classes.option}
+                                style={{
+                                    backgroundColor: `${index === currentRow ? 'lightgrey' : ''}`
+                                }}
                             >
                                 {option.name}
                             </div>

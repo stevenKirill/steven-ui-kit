@@ -12,6 +12,7 @@ const Dropdown = ({ options, placeHolder }) => {
     const [isOpened,setIsOpened] = useState(false);
     const [value, setValue] = useState('');
     const [currentRow,setCurrentRow] = useState(0);
+    const [list,setList] = useState(options);
 
     const ref = useRef(null);
 
@@ -20,6 +21,7 @@ const Dropdown = ({ options, placeHolder }) => {
             setIsOpened(true);
         }
         setValue(e.target.value);
+        filter(value)
     };
 
     const handleKeyDown = (e) => {
@@ -31,10 +33,10 @@ const Dropdown = ({ options, placeHolder }) => {
         } else if (e.key === ARROW_NAMES.ArrowUp) {
             setCurrentRow(currentRow-1)
         } else if(e.key === 'Enter') {
-            const { name } = options[currentRow];
+            const { name } = list[currentRow];
             setValue(name);
             setIsOpened(false);
-
+            setList(options);
         }
     };
 
@@ -42,6 +44,7 @@ const Dropdown = ({ options, placeHolder }) => {
         if (ref.current && !ref.current.contains(e.target)) {
             setIsOpened(false);
             setCurrentRow(0);
+            setList(options);
         }
     };
 
@@ -53,13 +56,21 @@ const Dropdown = ({ options, placeHolder }) => {
             setValue(chosenValue);
             setIsOpened(false);
             setCurrentRow(0);
+            setList(options);
         }
     };
 
     const filter = () => {
-        return options.filter(option => {
-            return option.name.toLowerCase().indexOf(value.toLowerCase()) > - 1;
-        });
+        setList(prev => {
+            return prev.filter(option => {
+                return option.name.toLowerCase().indexOf(value.toLowerCase()) > - 1;
+            });
+        })
+    };
+
+    const clear = () => {
+        setValue('');
+        setList(options);
     };
 
     useEffect(() => {
@@ -82,7 +93,7 @@ const Dropdown = ({ options, placeHolder }) => {
                         />
                     </div>
                     { value !== '' &&
-                        <div onClick={() => setValue('')} className={classes.delete}>
+                        <div onClick={clear} className={classes.delete}>
                             <FontAwesomeIcon
                                     icon={faTimes}
                                     size="s"
@@ -104,7 +115,7 @@ const Dropdown = ({ options, placeHolder }) => {
                 className={`${classes.options_container} ${isOpened ? classes.options_border : ''}`}
                 onClick={handleChooseValue}
             >
-                    {isOpened && filter(options).map((option,index) => {
+                    {isOpened && list.map((option,index) => {
                         return (
                             <div
                                 key={option.id}

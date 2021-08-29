@@ -37,10 +37,14 @@ const DatePicker = () => {
         const myNumReg = /^[0-9]+$/g;
         if (!myNumReg.test(value) && value !== '') return
         if (name === DAY) {
+            // TODO валидация  только чтобы можно было вводить корректрые даты
             setDay(value)
+
         } else if (name === MONTH) {
+            // TODO валидация  только чтобы можно было вводить корректрые месяцы
             setMonth(value)
         } else if (name === YEAR) {
+            // TODO валидация  только чтобы можно было вводить корректрые годы
             setYear(value);
         };
     };

@@ -6,9 +6,7 @@ const RangeSlider = ({
     maxValue = 70,
     minValue = 0,
     className = '',
-    withTooltip = false
 }) => {
-    const [showTooltip,setShowTooltip] = useState(false);
     const [min,setMin] = useState(minValue);
     const [max,setMax] = useState(maxValue);
     const [circleWidth,setCircleWidth] = useState('');
@@ -57,9 +55,6 @@ const RangeSlider = ({
             setMax(100);
             return;
         } else if (parseInt(bar.current.style.width) < 5) {
-            console.log(max,'=> max')
-            console.log(min,'=? min')
-            console.log(circleWidth,'=> circleWidth')
             bar.current.style.width = '0%';
             right.current.style.left = min + circleWidth + '%';
         } else {
@@ -97,9 +92,7 @@ const RangeSlider = ({
                         ref={left}
                         className={classes.circleLeft}
                         onMouseDown={startDragLeft}
-                        style={{
-                            left: `${min}%`
-                        }}
+                        style={{ left: `${min}%` }}
                     ></span>
                     <span
                         className={classes.progress}
@@ -108,15 +101,13 @@ const RangeSlider = ({
                             left: `${Number(min) + circleWidth}%`,
                             width: `${Number(max - min) - circleWidth}%`
                         }}
-                    ></span>
+                    />
                     <span
                         ref={right}
-                        style={{
-                            left: `${max}%`
-                        }}
+                        style={{ left: `${max}%` }}
                         className={classes.circleRigth}
                         onMouseDown={startDragRight}
-                    ></span>
+                    />
                 </div>
             </div>
             <div className={classes.ranges}>

@@ -28,6 +28,12 @@
 }
 .dot {
     margin-left: 5px;
+    position: relative;
+}
+.dot span {
+    position: absolute;
+    top: 5px;
+    right: -1px;
 }
 .pickerCalendar {
     position: absolute;

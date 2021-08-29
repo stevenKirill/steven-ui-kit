@@ -12,6 +12,7 @@ const menu = () => {
         <NavLink activeClassName={classes.active} to="/five-stars">FiveStars</NavLink>
         <NavLink activeClassName={classes.active} to="/switch">Switch</NavLink>
         <NavLink activeClassName={classes.active} to="/tooltip">Tooltip</NavLink>
+        <NavLink activeClassName={classes.active} to="/slider">Slider</NavLink>
     </div>
     );
 };

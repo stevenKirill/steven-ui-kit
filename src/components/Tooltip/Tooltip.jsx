@@ -1,10 +1,10 @@
 import React from 'react';
 
 /** Компонент tooltip */
-const Tooltip = ({ position }) => {
+const Tooltip = ({ position, children }) => {
     return (
         <div>
-            
+            Компонент tooltip
         </div>
     );
 }

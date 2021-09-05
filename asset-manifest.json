@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/steven-ui-kit/static/css/main.af021437.chunk.css",
+    "main.js": "/steven-ui-kit/static/js/main.b6186a64.chunk.js",
+    "main.js.map": "/steven-ui-kit/static/js/main.b6186a64.chunk.js.map",
+    "runtime-main.js": "/steven-ui-kit/static/js/runtime-main.0c29e681.js",
+    "runtime-main.js.map": "/steven-ui-kit/static/js/runtime-main.0c29e681.js.map",
+    "static/js/2.a8125b28.chunk.js": "/steven-ui-kit/static/js/2.a8125b28.chunk.js",
+    "static/js/2.a8125b28.chunk.js.map": "/steven-ui-kit/static/js/2.a8125b28.chunk.js.map",
+    "index.html": "/steven-ui-kit/index.html",
+    "static/css/main.af021437.chunk.css.map": "/steven-ui-kit/static/css/main.af021437.chunk.css.map",
+    "static/js/2.a8125b28.chunk.js.LICENSE.txt": "/steven-ui-kit/static/js/2.a8125b28.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0c29e681.js",
+    "static/js/2.a8125b28.chunk.js",
+    "static/css/main.af021437.chunk.css",
+    "static/js/main.b6186a64.chunk.js"
+  ]
+}

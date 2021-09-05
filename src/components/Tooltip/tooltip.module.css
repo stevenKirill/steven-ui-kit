@@ -1,0 +1,73 @@
+.common {
+    position: absolute;
+    padding: 15px 5px;
+    background-color: #0057B6;
+    color: #EEF1F3;
+    min-width: 100px;
+    opacity: 0;
+    transition-property: opacity, transform;
+    transform-origin: center center;
+    transition-timing-function: ease-in;
+    transition-duration: 0.3s;
+    text-align: center;
+    z-index: 100;
+}
+
+.common::after {
+    border: solid transparent;
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    border-color: rgba(255,0,0,0);
+    border-width: 6px;
+}
+
+.top::after {
+    top: 100%;
+    left: 50%;
+    background-color: transparent;
+    margin-left: -6px;
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    
+    border-top: 10px solid #0057B6;
+}
+
+.left::after {
+    top: 50%;
+    left: 100%;
+    /* top: 50%;
+    right: 100%; */
+    background-color: transparent;
+    margin-top: -6px;  width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    
+    border-left: 10px solid #0057B6;
+}
+
+.bottom::after {
+    bottom: 100%;
+    left: 50%;
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    
+    border-bottom: 10px solid #0057B6;
+}
+
+.right::after {
+    right: 100%;
+    top: 30%;
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    
+    border-right:10px solid #0057B6;; 
+}

@@ -16,5 +16,5 @@
     color: #0D356C;
 }
 .active {
-    border-bottom: 1px solid #0D356C;
+    color: #0057B6 !important;
 }

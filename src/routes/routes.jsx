@@ -9,6 +9,8 @@ import FiveStarsPage from '../pages/FiveStarsPage';
 import SwitchPage from '../pages/SwitchPage';
 import TooltipPage from '../pages/TooltipPage';
 import SliderPage from '../pages/SliderPage';
+import AccordionPage from '../pages/AccordionPage';
+import NotificationPage from '../pages/NotificationPage';
 
 const routes = () => {
     return (
@@ -21,6 +23,8 @@ const routes = () => {
             <Route path="/switch" component={SwitchPage}/>
             <Route path="/tooltip" component={TooltipPage}/>
             <Route path="/slider" component={SliderPage}/>
+            <Route path="/accordion" component={AccordionPage}/>
+            <Route path="/notification" component={NotificationPage}/>
         </div>
     );
 };

@@ -13,6 +13,8 @@ const menu = () => {
         <NavLink activeClassName={classes.active} to="/switch">Switch</NavLink>
         <NavLink activeClassName={classes.active} to="/tooltip">Tooltip</NavLink>
         <NavLink activeClassName={classes.active} to="/slider">Slider</NavLink>
+        <NavLink activeClassName={classes.active} to="/accordion">Accordion</NavLink>
+        <NavLink activeClassName={classes.active} to="/notification">Notification</NavLink>
     </div>
     );
 };

@@ -11,6 +11,7 @@ import TooltipPage from '../pages/TooltipPage';
 import SliderPage from '../pages/SliderPage';
 import AccordionPage from '../pages/AccordionPage';
 import NotificationPage from '../pages/NotificationPage';
+import ProgressBarPage from '../pages/ProgressBarPage';
 
 const routes = () => {
     return (
@@ -25,6 +26,7 @@ const routes = () => {
             <Route path="/slider" component={SliderPage}/>
             <Route path="/accordion" component={AccordionPage}/>
             <Route path="/notification" component={NotificationPage}/>
+            <Route path="/progress-bar" component={ProgressBarPage}/>
         </div>
     );
 };

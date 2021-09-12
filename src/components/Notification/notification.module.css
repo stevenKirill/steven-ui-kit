@@ -1,0 +1,39 @@
+.wrapper {
+    position: fixed;
+    z-index: 9999px;
+    top: 10px;
+    right: 10px;
+    width: 300px;
+    color: white;
+}
+.bar {
+    height: 10px;
+    background-color: #262C40;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+.common {
+    box-shadow: 0 0 10px rgba(0,0,0, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+}
+.success {
+    background-color: #239C3D;
+}
+.error {
+    background-color: #A32B2B;
+}
+.info {
+    background-color: #F5984E;
+}
+.unknown {
+    background-color: #5960EA;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}

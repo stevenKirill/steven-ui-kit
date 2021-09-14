@@ -1,0 +1,40 @@
+.wrapper {
+    width: 300px;
+}
+.box {
+    margin-top: 15px;
+}
+.texts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bar {
+    width: 100%;
+    display: block;
+    height: 20px;
+    background-color: black;
+}
+.one-sec {
+    animation: animate 1s ease-in;
+}
+.two-sec {
+    animation: animate 2s ease-in;
+}
+.three-sec {
+    animation: animate 3s ease-in;
+}
+.four-sec {
+    animation: animate 4s ease-in;
+}
+.five-sec {
+    animation: animate 5s ease-in;
+}
+@keyframes animate {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+};

@@ -4,7 +4,7 @@ import classes from './menu.module.css';
 
 const menu = () => {
     return (
-        <div className={classes.menu}>
+        <div className={classes.menu} style={{ display: 'flex', flexDirection: 'column' }}>
         <NavLink activeClassName={classes.active} to="/drop-down">DropDown</NavLink>
         <NavLink activeClassName={classes.active} to="/calendar">Calendar</NavLink>
         <NavLink activeClassName={classes.active} to="/date-picker">DatePicker</NavLink>

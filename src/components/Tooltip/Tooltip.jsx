@@ -9,7 +9,6 @@ const TooltipContent = ({ content, position, additionalClass = '', coords }) => 
     const tooltipEl = useRef(null);
 
     useEffect(() => {
-
         const { current } = tooltipEl;
         if (current) {
             if (position === TOOLTIP_POSITIONS.TOP) {

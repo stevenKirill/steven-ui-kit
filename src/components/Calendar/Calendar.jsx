@@ -16,7 +16,7 @@ const Calendar = ({ clickHandler }) => {
     const dayOfweek = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
 
     useEffect(() => {
-        setCalendar(buildInitialCalendar(currentDay))
+        setCalendar(buildInitialCalendar(currentDay));
     },[currentDay]);
 
     useEffect(() => {

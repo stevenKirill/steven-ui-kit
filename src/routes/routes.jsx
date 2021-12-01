@@ -12,6 +12,7 @@ import SliderPage from '../pages/SliderPage';
 import AccordionPage from '../pages/AccordionPage';
 import NotificationPage from '../pages/NotificationPage';
 import ProgressBarPage from '../pages/ProgressBarPage';
+import SelectPage from '../pages/SelectPage';
 
 const routes = () => {
     return (
@@ -27,6 +28,7 @@ const routes = () => {
             <Route path="/accordion" component={AccordionPage}/>
             <Route path="/notification" component={NotificationPage}/>
             <Route path="/progress-bar" component={ProgressBarPage}/>
+            <Route path="/select" component={SelectPage}/>
         </div>
     );
 };
